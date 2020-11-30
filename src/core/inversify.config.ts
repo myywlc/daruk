@@ -15,6 +15,7 @@ const {
 const DarukServer = (options?: PartialOptions) => {
   const instance = new Daruk();
   instance._initOptions(options);
+  darukContainer.bind<Daruk>('Daruk').toConstantValue(instance);
   return instance;
 };
 
